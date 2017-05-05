@@ -9,15 +9,15 @@ public class Tekoaly {
     }
 
     public String annaSiirto() {
-        siirto++;
-        siirto = siirto % 3;
+        siirto = (siirto + 1) % 3;
 
-        if (siirto == 0) {
-            return "k";
-        } else if (siirto == 1) {
-            return "p";
-        } else {
-            return "s";
+        switch (siirto) {
+            case 0:
+                return "k";
+            case 1:
+                return "p";
+            default:
+                return "s";
         }
     }
 
