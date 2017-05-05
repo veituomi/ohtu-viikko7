@@ -2,7 +2,7 @@ package ohtu.kivipaperisakset;
 
 import java.util.Scanner;
 
-public class KPSPelaajaVsPelaaja extends KPSGeneerinen {
+public class KPSPelaajaVsPelaaja extends KPSGeneerinen implements KPSPeli {
 
     private static final Scanner scanner = new Scanner(System.in);
 
