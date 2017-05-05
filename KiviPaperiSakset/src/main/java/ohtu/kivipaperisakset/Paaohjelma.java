@@ -15,15 +15,8 @@ public class Paaohjelma {
                     + "\n (c) parannettua tekoälyä vastaan"
                     + "\nmuilla valinnoilla lopetataan");
 
-            String vastaus = scanner.nextLine();
-            KPSPeli peli;
-            if (vastaus.endsWith("a")) {
-                peli = new KPSPelaajaVsPelaaja();
-            } else if (vastaus.endsWith("b")) {
-                peli = new KPSTekoaly();
-            } else if (vastaus.endsWith("c")) {
-                peli = new KPSParempiTekoaly();
-            } else {
+            KPSPeli peli = Pelitehdas.luo(scanner.nextLine());
+            if (peli == null) {
                 break;
             }
 
