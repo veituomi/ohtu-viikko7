@@ -13,12 +13,12 @@ public abstract class KPSGeneerinen {
 
             System.out.print(lause2);
             String tokanSiirto = p2.annaSiirto();
+
+            p1.asetaSiirto(tokanSiirto);
             p2.asetaSiirto(ekanSiirto);
 
             if (onkoOkSiirto(ekanSiirto) && onkoOkSiirto(tokanSiirto)) {
-                tuomari.kirjaaSiirto(ekanSiirto, tokanSiirto);
-                System.out.println(tuomari);
-                System.out.println();
+                tuomaroi(tuomari, ekanSiirto, tokanSiirto);
             } else {
                 break;
             }
@@ -27,6 +27,12 @@ public abstract class KPSGeneerinen {
         System.out.println();
         System.out.println("Kiitos!");
         System.out.println(tuomari);
+    }
+
+    private void tuomaroi(Tuomari tuomari, String ekanSiirto, String tokanSiirto) {
+        tuomari.kirjaaSiirto(ekanSiirto, tokanSiirto);
+        System.out.println(tuomari);
+        System.out.println();
     }
 
     private static boolean onkoOkSiirto(String siirto) {
